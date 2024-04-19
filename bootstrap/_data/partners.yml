@@ -1,0 +1,44 @@
+# partner links
+
+- name: "Channel Islands National Marine Sanctuary"
+  acronym: "CINMS"
+  link: "https://channelislands.noaa.gov/"
+  
+- name: "Channel Islands National Park"
+  acronym:
+  link: "https://www.nps.gov/chis/index.htm"
+  
+- name: "USGS Western Ecological Research Center"
+  acronym: WERC
+  link: "https://www.werc.usgs.gov/"
+
+- name: "Southern California Coastal Ocean Observing System"
+  acronym: "SCCOOS"
+  link: "https://www.sccoos.org/"
+
+- name: "Plumes and Blooms Project"
+  acronym: "PnB"
+  link: "https://www.oceancolor.ucsb.edu/plumes_and_blooms/"
+
+- name: Southern California Coastal Water Research Project
+  acronym: SCCWRP
+  link: "https://www.sccwrp.org/"
+
+- name: "Santa Barbara Coastal Long-Term Ecological Research Program"
+  acronym: "SBC LTER"
+  link: "https://sbclter.msi.ucsb.edu/"
+
+- name: "Gray Whales Count"
+  acronym: 
+  link: "https://www.graywhalescount.org/"
+
+- name: "San Onofre Nuclear Generating Station Mitigation Monitoring Program"
+  acronym: UCSB SONGS
+  link: "https://marinemitigation.msi.ucsb.edu/"
+
+- name: "California Cooperative Oceanic Fisheries Investigations"
+  acronym: "CalCOFI"
+  link: "https://www.calcofi.org/"
+
+
+

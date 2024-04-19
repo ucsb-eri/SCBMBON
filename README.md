@@ -1,2 +1,0 @@
-# SCBMBON
-scb.marinebon.org

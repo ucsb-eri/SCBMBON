@@ -1,0 +1,15 @@
+{% for partner in site.data.partners %}
+<div class="partner-wrapper">
+	<ul>
+		<li>
+			<a href="{{partner.link}}" target="new">
+				<h5 class="partner-link">{{partner.name}}
+				{% if partner.acronym %}
+					<small>({{partner.acronym}})</small>
+				{% endif %}
+				</h5>
+			</a>
+		</li>
+	</ul>
+</div>
+{% endfor %}

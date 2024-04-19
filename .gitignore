@@ -1,0 +1,8 @@
+
+bootstrap/.DS_Store
+bootstrap/.jekyll-cache/
+bootstrap/.svn/
+.DS_Store
+bootstrap/_site/
+.jekyll-cache/
+bootstrap/Gemfile.lock

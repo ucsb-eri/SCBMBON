@@ -1,0 +1,16 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+	Lead Principle Investigator: Robert (Bob) Miller
+    Web designer: Jacob (Cob) Staines
+    Web maintain: Li Kui
+	Maps and imagery support: Brandon Doheny
+
+# SITE
+	Language: English
+	Doctype:HTML5
+	IDE: Notepad++, Ruby with Jekyll, Photoshop, Illustrator, Google Chrome
+	CSS3, HTML5
+    Apache Server Configs, jQuery, Modernizr, Normalize.css, Bootstrap

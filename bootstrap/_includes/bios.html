@@ -1,0 +1,19 @@
+<div class="people-wrapper">
+{% for bio in site.data.bios %}
+	<div class="bio-wrapper row">
+		<div class="col-md-5">
+		{% if bio.image %}
+			<img class="bio-image img-responsive" alt="{{ bio.title }} image" src="{{ site.url }}/img/bioimages/{{ bio.image }}">
+		{% else %}
+			<img class="bio-image img-responsive" alt="{{ bio.title }}" src="https://placehold.it/250x280" >
+		{% endif %}
+		</div>
+		<div class="col-md-7">
+			<h3>{{ bio.title }}</h3>
+			<h4 class="text-muted">{{ bio.role }}</h4>
+			<p>{{ bio.biotext }}</p>
+		</div>
+		<span class="stretch"></span>
+	</div>
+{% endfor %}
+</div>

@@ -1,0 +1,13 @@
+Instruction on running Jekyll on Windows
+
+1. install jekyll following: https://jekyllrb.com/docs/windows/
+
+2. lunch Ubuntu
+
+3. locate the directory: cd /mnt/d/website/bootstrap
+
+4. type "jekyll build", and then "jekyll server -w"
+
+5. Ctrl -C to quit the jekyll server and run "jekyll build" again because the auto generation might not do its work. 
+
+6. paste the "_site" onto the sbcbon-web. 

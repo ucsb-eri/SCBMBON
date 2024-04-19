@@ -1,0 +1,12 @@
+<div class="people-wrapper">
+{% for bio in site.data.bios %}
+	<div class="bio-wrapper row">
+		<div class="col-lg-12">
+			<h3>{{ integration.title }}</h3>
+			<h4 class="text-muted">{{ integration.role }}</h4>
+			<p>{{ integration.text }}</p>
+		</div>
+		<span class="stretch"></span>
+	</div>
+{% endfor %}
+</div>

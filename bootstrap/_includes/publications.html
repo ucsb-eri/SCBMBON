@@ -1,0 +1,37 @@
+<div class="publication-wrapper">
+	<h3>Articles</h3>
+	{% for pub in site.data.publications %}
+		{% if pub.status == 'published' and pub.class == 'article' %}
+			<h3 class="publication"><small>{{ pub.citation }}
+			{% if pub.link %}
+				<a href="{{ pub.link }}" target="new">[Link]</a>
+			{% endif %}
+			</small></h3>
+		{% endif %}
+	{% endfor %}
+	<hr />
+
+	<h3>Books & Charpters</h3>
+	{% for pub in site.data.publications %}
+		{% if pub.status == 'published' and pub.class == 'book' %}
+			<h3 class="publication"><small>{{ pub.citation }}
+			{% if pub.link %}
+				<a href="{{ pub.link }}" target="new">[Link]</a>
+			{% endif %}
+			</small></h3>
+		{% endif %}
+	{% endfor %}
+	<hr />
+<!--
+	<h3>In Press and In Review</h3>
+	{% for pub in site.data.publications %}
+		{% if pub.status == 'in_press' or pub.status == 'in_review' %}
+			<h3 class="publication"><small>{{ pub.citation }}
+			{% if pub.link %}
+				<a href="{{ pub.link }}" target="new">[Link]</a>
+			{% endif %}
+			</small></h3>
+		{% endif %}
+	{% endfor %}
+-->
+</div>

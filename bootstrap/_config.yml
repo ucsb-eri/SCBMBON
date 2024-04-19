@@ -1,0 +1,28 @@
+# Site wide configuration
+
+title: "Southern California Bight Marine Biodiversity Observation Network"
+description:
+#url: "http://127.0.0.1:4000/"
+url:
+# subdir for content.
+#url: "http://sbc.marinebon.org"
+
+# ?? setting cannot find name of server?? whats with that
+# url: ""
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  
+# Site owner
+owner:
+  name: UCSB Marine Science Institute
+  web:
+  email:
+  twitter:
+  bio:
+  avatar: # 160x160 px image for author byline
+  google:
+    plus:
+    ad-client:
+    ad-slot:
+  disqus-shortname:

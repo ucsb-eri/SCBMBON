@@ -1,0 +1,448 @@
+/*! HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+ */
+ 
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+.page-wrapper {
+	min-height: 100vh;
+	position: relative;
+}
+
+#navbar-logo{
+	width: 55px;
+	height: 40px;
+	background-image: url("../img/logo/MBON_Logo_icon_White_051517.png");
+	background-repeat: no-repeat;
+	background-position: top left;
+	background-attachment: scroll;
+	background-size: 40px 40px;
+	margin-top: -10px;
+	padding-right: 15px;
+}
+   
+#intro-header{
+/*  original padding	
+    padding-top: 150px;
+	padding-bottom: 150px;
+	 */
+	 /* header padding and margin tweaked so it is shallow, wider
+	  * note: margin was set to auto on container class. setting here pushes it out from the default a bit */
+	padding-top: 60px;
+	padding-bottom: 60px;
+	margin-left: -15%;
+	margin-right: -15%;
+	text-align: center;
+	color: #fff;
+ 	background-image: url("../img/bgs/3788.jpg");
+ 	/* url("../img/bgs/6a769adc0b3ea18222c05c30a5a41501.jpg");  */
+ 	background-color: #cccccc; /* only used if image is not available */
+	background-repeat: no-repeat;
+	background-position: center center;
+/* 	background-size: 100% 100%;
+ 	background-size: 25% 25% */
+	background-attachment: fixed;
+   	z-index: 0;
+}
+
+#intro-message{
+	position: relative;
+	padding-top: 0;
+	padding-bottom: 0;
+	text-shadow: 2px 2px rgba(0,0,0,0.2);
+}
+
+#intro-message hr{
+	border-top: 3px solid #fff;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+	width: 50%;
+	max-width: 500px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#intro-logo{
+	width: 800px;
+	height: 320px;
+	margin: auto;
+	background-image: url("../img/logo/MBON_Logo_Full_White_800X320.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: scroll;
+	background-size: 800px 320px;
+	z-index: 0;
+}
+
+#landing-content{
+	box-shadow: 0px -2px 0px 0px rgba(0, 0, 0, 0.2);
+	
+}
+
+.article-wrapper {
+	margin-top: 50px;
+}
+
+.internal-link {
+	position: absolute;
+	margin: -50px;
+}
+
+.bio-wrapper:nth-child(even) {
+	background-color: #f0f0f0;
+}
+
+.bio-wrapper {
+	padding-top: 15px;
+	min-height: 310px;
+	margin-bottom: 15px;
+}
+
+.bio-wrapper h3{
+	margin: 0;
+}
+
+.bio-image {
+	width: 250px;
+}
+
+.funder-logo {
+	padding-top: 15px;
+	margin: auto;
+}
+
+.stretch {
+	width: 100%;
+	display:inline-block;
+}
+
+.publication {
+	margin-top: 0;
+	margin-bottom: 20px;
+}
+
+.map-base{ 
+	height: 100%; 
+	width: 100%; 
+	margin: 0; 
+	padding: 0;
+}
+
+#map-wrapper, #map {
+	height: 100%; 
+	width: 100%; 
+	margin: 0; 
+	padding: 0; 
+}
+
+#map{
+	position: absolute;
+	margin-top: 50px;
+}
+
+.iframe-window{
+    height: 100%;
+    width: 100%;
+}
+
+.footer-wrapper{
+	background-color: #222;
+	border-color: #080808;
+	width: 100%;
+	text-align: left;
+	font: normal 18px sans-serif;
+	padding: 10px;
+    margin-top: 40px;
+    border-width: 1px 0 0;
+	position: absolute;
+	bottom: 0px;
+	transform: translateY(calc(100% + 40px));
+}
+
+.footer-wrapper h5 {
+	color: #9d9d9d;
+	border-style: solid;
+	border-width: 1px 0px 0px;
+	border-color: #fff;
+	padding-top: 5px;
+	margin-top: 0;
+}
+
+.footer-wrapper a:link, .footer-wrapper a:visited {
+	display: inline;
+	color: #9d9d9d;
+	padding: 0px 15px 0px;
+	text-decoration: none;
+}
+.footer-wrapper a:hover,a:active {
+	color: #fff;
+	text-decoration: none;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers:
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 940px) {
+    /* Style adjustments for viewports that meet the condition */
+
+}
+
+@media screen and (max-width: 400px) {
+	#funders-wrapper {
+		text-align: left;
+	}
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+
