@@ -16,7 +16,6 @@ COPY --chown=jekyll:jekyll . .
 USER jekyll
 RUN jekyll build  --verbose --profile
 
-# Use Nginx image to serve the website
 FROM nginx:alpine
 COPY --from=builder /app/_site /usr/share/nginx/html
 EXPOSE 80
