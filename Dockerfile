@@ -6,7 +6,7 @@ RUN mkdir /app && chown -R jekyll:jekyll /app
 WORKDIR /app
 
 # Optimizing bundle install by caching gems
-COPY Gemfile Gemfile.lock ./
+COPY --chown=jekyll:jekyll Gemfile Gemfile.lock ./
 RUN chown jekyll:jekyll Gemfile Gemfile.lock
 
 # Ensure we're using the right user and install dependencies
@@ -14,7 +14,7 @@ USER jekyll
 RUN bundle config set --local path 'vendor/bundle' && bundle install --jobs 4 --verbose
 
 # Copy your website source code to the container
-COPY . .
+COPY --chown=jekyll:jekyll . .
 RUN chown -R jekyll:jekyll /app
 
 # Install dependencies and build the website
