@@ -1,23 +1,19 @@
 # Use Jekyll image to build the website
 FROM jekyll/jekyll:latest as builder
 
-# Set working directory and ensure correct permissions
-RUN mkdir /app && chown -R jekyll:jekyll /app
+# Set working directory
+RUN mkdir /app
 WORKDIR /app
 
-# Optimizing bundle install by caching gems
+# Copy files as the jekyll user
 COPY --chown=jekyll:jekyll Gemfile Gemfile.lock ./
-RUN chown jekyll:jekyll Gemfile Gemfile.lock
-
-# Ensure we're using the right user and install dependencies
-USER jekyll
 RUN bundle config set --local path 'vendor/bundle' && bundle install --jobs 4 --verbose
 
-# Copy your website source code to the container
+# Copy your website source code to the container as jekyll user
 COPY --chown=jekyll:jekyll . .
-RUN chown -R jekyll:jekyll /app
 
 # Install dependencies and build the website
+USER jekyll
 RUN jekyll build  --verbose --profile
 
 # Use Nginx image to serve the website
