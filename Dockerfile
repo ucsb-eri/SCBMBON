@@ -2,19 +2,27 @@
 FROM jekyll/jekyll:latest as builder
 
 # Set working directory
-RUN mkdir /app && chown -R jekyll:jekyll /app
+RUN mkdir /app
 WORKDIR /app
 
-# Optimizing bundle install by caching gems
-COPY Gemfile Gemfile.lock ./
-RUN chown jekyll:jekyll Gemfile Gemfile.lock
+# Change ownership to jekyll
+RUN chown -R jekyll:jekyll /app
+
+# Copy and set permissions for Gemfiles
+COPY --chown=jekyll:jekyll Gemfile Gemfile.lock ./
+
+# Bundle install as jekyll user
+USER jekyll
 RUN bundle config set --local path 'vendor/bundle' && bundle install --jobs 4 --verbose
 
-# Copy your website source code to the container
-COPY . .
+# Copy your website source code to the container as jekyll user
+COPY --chown=jekyll:jekyll . .
 
-# Install dependencies and build the website
-RUN jekyll build  --verbose --profile
+# Run Jekyll build
+RUN jekyll build --verbose --profile
+
+# Switch back to root to setup nginx
+USER root
 
 # Use Nginx image to serve the website
 FROM nginx:alpine
