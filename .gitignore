@@ -6,3 +6,4 @@ bootstrap/.svn/
 bootstrap/_site/
 .jekyll-cache/
 bootstrap/Gemfile.lock
+_site
